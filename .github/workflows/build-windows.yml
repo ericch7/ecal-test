@@ -189,8 +189,11 @@ jobs:
       working-directory: ${{ runner.workspace }}/_build/sdk
 
     - name: Build Release
-      run: build-wrapper-win-x86-64 --out-dir ecal-test/${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build . --config Release
-      working-directory: ${{ runner.workspace }}/_build/complete
+      run: |
+        cd ${{ runner.workspace }}/_build/complete
+        build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build . --config Release
+        
+      #working-directory: ${{ runner.workspace }}/_build/complete
 
     # Create Python.
     # The strang-looking double-cmake is an ugly workaround to force CMake to
