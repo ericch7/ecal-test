@@ -132,6 +132,7 @@ jobs:
       run: |
           sonar-scanner --define sonar.host.url="${{ env.SONAR_SERVER_URL }}" --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}"
 
+
     # Create Python Wheels
     # The strang-looking double-cmake is an ugly workaround to force CMake to
     # re-find Python, after we have changed the venv from the outside. The
