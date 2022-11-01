@@ -1,5 +1,6 @@
 name: Build Ubuntu 22.04
 
+
 on:
   push:
   pull_request:
