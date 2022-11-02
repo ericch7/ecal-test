@@ -387,21 +387,17 @@ double MeasurementConverter::getConversionFactor(const eCALMeasCutterUtils::Scal
   case(eCALMeasCutterUtils::ScaleType::seconds):
   {
     return 1000000.0;
-    break;
   }
   case(eCALMeasCutterUtils::ScaleType::milliseconds):
   {
     return 1000.0;
-    break;
   }
   case(eCALMeasCutterUtils::ScaleType::microseconds):
   {
     return 1.0;
-    break;
   }
   default:
     return 1.0;
-    break;
   }
 }
 
